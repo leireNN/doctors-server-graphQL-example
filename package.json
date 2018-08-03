@@ -1,0 +1,37 @@
+{
+  "name": "doctors_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/server.js",
+  "scripts": {
+    "build": "babel src -d dist --source-maps",
+    "start": "nodemon ./src/server.js --exec babel-node -e js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "flyway -c config/flyway.js migrate"
+  },
+  "author": "",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-plugin-transform-async-generator-functions": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.23.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "apollo-engine": "^0.5.2",
+    "apollo-server-express": "^2.0.0",
+    "apollo-tracing": "^0.1.1",
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.12.3",
+    "graphql-extensions": "^0.0.5",
+    "graphql-tools": "^2.15.0",
+    "node-fetch": "^2.1.1",
+    "node-flywaydb": "^0.1.4",
+    "promise-mysql": "^3.2.1",
+    "webtask-tools": "^3.2.0"
+  }
+}
